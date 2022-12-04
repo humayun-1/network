@@ -6,7 +6,9 @@ import Button from './Button'
 const CommunityCard = () => {
     const navigate = useNavigate();
     return (
-        <div className='border p-4 rounded-xl flex flex-col gap-4'>
+        <div className='border p-4 rounded-xl flex flex-col gap-4 cursor-pointer' onClick={() => {
+            navigate('/question-detail')
+        }} >
             <div className='flex items-center gap-3'>
                 <div className='rounded-full px-3 py-1 text-sm flex items-center gap-1 bg-[#FEF3C7] text-[#9A7C04]'>
                     <Svgs.Trending />
@@ -36,9 +38,7 @@ const CommunityCard = () => {
                     </div>
                 </div>
                 <div>
-                    <h1 onClick={() => {
-                        navigate('/question-detail')
-                    }} className='cursor-pointer text-[#248489]'>12 Answers</h1>
+                    <h1 className='cursor-pointer text-[#248489]'>12 Answers</h1>
                 </div>
             </div>
         </div>

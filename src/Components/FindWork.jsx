@@ -7,7 +7,7 @@ import JobCard from './Common/JobCard'
 import Svgs from './Svgs'
 
 const FindWork = () => {
-    const [Active, setActive] = useState('')
+    const [Active, setActive] = useState('full')
     return (
         <>
             <Header />

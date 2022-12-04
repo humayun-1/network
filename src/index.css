@@ -200,9 +200,11 @@ input:-webkit-autofill:active {
     .nav-bar-menu .active {
         color: white;
     }
-    .course-bg{
+
+    .course-bg {
         background-position: right !important;
     }
+
     .bg-started::after {
         display: none;
     }
@@ -471,4 +473,8 @@ div[class$='-control'] {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.hover-fill-white:hover path {
+    fill: white;
 }

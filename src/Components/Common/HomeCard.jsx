@@ -66,8 +66,8 @@ const HomeCard = (props) => {
                             </div>
                         </div>
                         <div className='flex items-center gap-2'>
-                            <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="h-[2.4rem] w-[2.4rem] rounded-full object-cover" />
-                            <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" className="h-[2.4rem] w-[2.4rem] rounded-full object-cover" />
+                            <Svgs.React fill='#248489' />
+                            <Svgs.Flutter fill='#248489' />
                         </div>
                     </>
                 }

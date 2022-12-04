@@ -15,8 +15,11 @@ import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Pagination } from "swiper";
 import Footer from "../Components/Footer";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+    const navigate = useNavigate()
     const [HomeSection, setHomeSection] = useState('All')
     const Home_Card_Data = [
         { 'img': '/assets/images/card-img-1.jpg' },
@@ -37,7 +40,7 @@ const Home = () => {
     ]
     return (
         <>
-            <Header />
+            <Header login={false} />
             {/* Banner */}
             <section>
                 <div className='h-[34rem]'>
@@ -52,8 +55,12 @@ const Home = () => {
                                 <br className='hidden lg:block' />
                                 and App professionals.</p>
                             <div className='flex items-center gap-5'>
-                                <Button text='Get Started' />
-                                <Button outline={true} text='Explore Now' />
+                                <Button text='Get Started' onClick={() => {
+                                    navigate('/register')
+                                }} />
+                                <Button outline={true} text='Explore Now' onClick={() => {
+                                    navigate('/discover')
+                                }} />
                             </div>
                         </div>
                         <div className='flex-1 h-full'>
@@ -232,7 +239,7 @@ const Home = () => {
                                     slidesPerView: 3,
                                 },
                             }}
-                            modules={[Pagination,Autoplay]}
+                            modules={[Pagination, Autoplay]}
                             className="mySwiper"
                         >
                             {

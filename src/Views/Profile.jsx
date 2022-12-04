@@ -25,16 +25,15 @@ const Profile = () => {
                     <div className='pt-[4rem]'>
                         <div className='flex items-center justify-end gap-3'>
                             <Button text='Hire Me' />
-                            <Button text='Edit Profile' onClick={() => {
-                                setEditProfile(true)
-                            }} />
                             <Button text='Follow' outline />
-                            <div className='h-[2.5rem] w-[2.5rem] rounded-full border border-[#7B7B7B] flex items-center justify-center'>
-                                <Svgs.ThreeDots />
+                            <div onClick={() => {
+                                setEditProfile(true)
+                            }} className='h-[2.5rem] w-[2.5rem] cursor-pointer transition-all hover:bg-[#248489] hover-fill-white rounded-full border border-[#7B7B7B] flex items-center justify-center'>
+                                <Svgs.Edit size='20' />
                             </div>
 
                         </div>
-                        <div className='flex flex-col gap-3'>
+                        <div className='flex flex-col gap-5'>
                             <div className='flex items-center gap-[1.5rem]'>
                                 <h1 className='font-extrabold text-[2rem] flex items-center gap-2'>Anas Shafi
                                     <span>
@@ -68,10 +67,21 @@ const Profile = () => {
                                 </div>
                             </div>
                             <div className='flex items-center gap-3 flex-wrap'>
-                                <div className='rounded-full px-5 py-2 flex items-center gap-2 border text-sm'>
-                                    <Svgs.Flutter fill='#00B5F8' />
-                                    Flutter
+                                <div className='rounded-full px-5 py-1 flex items-center gap-2 border text-sm'>
+                                    <Svgs.React fill='#00B5F8' />
+                                    React
                                 </div>
+                                <Button text={
+                                    <div className='flex items-center gap-2'>
+                                        <Svgs.Flutter size='12' />
+                                        <p className='text-[#7B7B7B] text-xs'>Flutter</p>
+                                        <div className='text-xs flex items-center gap-1'>
+                                            <Svgs.LvlExpert />
+                                            <p className='font-semibold text-black text-[0.6rem]'>Basic</p>
+                                            <p className='text-[#8E8E8E]'>Lvl</p>
+                                        </div>
+                                    </div>
+                                } className='!py-3 text-sm !px-2 rounded-full border-gray-200' bg='bg-white' />
                             </div>
                             <div className='p-5 flex gap-3 flex-col border rounded-lg'>
                                 <h1 className='font-semibold text-xl'>About</h1>

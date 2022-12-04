@@ -8,9 +8,12 @@ import Input from '../Components/Input'
 import FormInput from '../Components/Common/FormInput'
 import FormDescription from '../Components/Common/FormDescription'
 import Dropwdown from '../Components/Common/Dropdown'
+import { useNavigate } from 'react-router-dom'
 
 const EditProfile = () => {
-    const [HomeSection, setHomeSection] = useState('All')
+    const [HomeSection, setHomeSection] = useState('All');
+    const navigate = useNavigate();
+    const [editTypeTech, setEditTypeTech] = useState(false)
     return (
         <>
             <Header />
@@ -29,8 +32,12 @@ const EditProfile = () => {
                     </div>
                     <div className='pt-[3rem]'>
                         <div className='flex items-center justify-end gap-3'>
-                            <Button text='Cancel' disabled />
-                            <Button text='Save' />
+                            <Button text='Cancel' disabled onClick={() => {
+                                navigate('/profile')
+                            }} />
+                            <Button text='Save' onClick={() => {
+                                navigate('/profile')
+                            }} />
                         </div>
                     </div>
 
@@ -61,7 +68,9 @@ const EditProfile = () => {
                                     <p className='text-sm text-[#7B7B7B]'>Edit and Add your skills and technologies</p>
                                 </div>
                                 <div className=''>
-                                    <Button text='Save' />
+                                    <Button onClick={() => {
+                                        setEditTypeTech(!editTypeTech)
+                                    }} text={editTypeTech ? 'Save' : 'Add Skill'} />
                                 </div>
                             </div>
                             <div className='grid lg:grid-cols-2 gap-4'>
@@ -78,11 +87,14 @@ const EditProfile = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 pt-[1rem]'>
-                                <FormInput title={'Category'} placeholder='Select Category' />
-                                <FormInput title={'Skill & Technology'} placeholder='Select Skill & Technology' />
-                                <FormInput title={'Skill Level'} placeholder='Select Skill Level' />
-                            </div>
+                            {
+                                editTypeTech &&
+                                <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 pt-[1rem]'>
+                                    <Dropwdown showTitle title={'Category'} placeholder='Select Category' />
+                                    <Dropwdown showTitle title={'Skill & Technology'} placeholder='Select Skill & Technology' />
+                                    <Dropwdown showTitle title={'Skill Level'} placeholder='Select Skill Level' />
+                                </div>
+                            }
                         </div>
 
                         <div className='px-4 py-3 border rounded-lg flex flex-col gap-4 mb-[3rem]'>

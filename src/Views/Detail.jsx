@@ -28,8 +28,8 @@ const Detail = () => {
             <Header />
             <div className='pt-[2rem] my-[2rem] container flex flex-col gap-[1.5rem]'>
 
-                <div className='grid md:grid-cols-2 gap-[2rem]'>
-                    <div>
+                <div className='grid md:grid-cols-2 gap-[2rem] container'>
+                    <div className="max-w-[80vw]">
                         <Swiper
                             spaceBetween={10}
                             navigation={true}
@@ -38,10 +38,10 @@ const Detail = () => {
                             className="detail-swiper"
                         >
                             <SwiperSlide>
-                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" className="h-full w-full object-cover" />
                             </SwiperSlide>
                             <SwiperSlide>
-                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" className="h-full w-full object-cover" />
                             </SwiperSlide>
                             <div className="absolute top-3 left-3 z-10">
                                 <CircleIcon>

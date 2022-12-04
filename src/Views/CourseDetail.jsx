@@ -20,8 +20,8 @@ const CourseDetail = () => {
                 <div>
                     <Button text={'Web Development Course'} className='text-[#248489] !bg-[#DBEEF2] border-none' />
                 </div>
-                <div className='flex items-center gap-4 justify-between'>
-                    <div className='flex items-center gap-8'>
+                <div className='flex items-center gap-4 justify-between flex-wrap'>
+                    <div className='flex items-center gap-8 flex-wrap'>
                         <div>
                             <p className='text-sm text-[#7B7B7B]'>Posted Date</p>
                             <h1 className='text-[#35424B]'>Sept 2022</h1>

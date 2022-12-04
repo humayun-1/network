@@ -7,12 +7,11 @@ import ProfileStack from './ProfileStack'
 const JobCard = (props) => {
     const navigate = useNavigate();
     return (
-        <div className='border p-3 rounded-md shadow-md flex flex-col gap-4'>
-            <div className='flex items-center gap-3 cursor-pointer' onClick={
-                () => {
-                    navigate('/job-detail')
-                }
-            }>
+        <div className='border p-3 rounded-md shadow-md flex flex-col gap-4 cursor-pointer' onClick={
+            () => {
+                navigate('/job-detail')
+            }}>
+            <div className='flex items-center gap-3 cursor-pointer'>
                 <div>
                     <img src="https://loremflickr.com/400/400" className="h-[5rem] w-[5rem] rounded-lg object-cover" />
                 </div>
